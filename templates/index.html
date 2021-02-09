@@ -1,0 +1,205 @@
+{%extends 'base.html'%}
+{%load staticfiles%}
+{%block nav%}
+<nav>
+    <div class="container">
+        <div class="row">
+            <div class="columns col2 not-break-col2">
+
+                    <div class="logo-container">
+                        <img class="main-logo" src='{% static "images/icons/rabbit-head.png" %}' alt="">
+                   </div>
+
+            </div>
+            <div class="columns col10 not-break-col10">
+                <ul class="main-menu">
+                    <li><a id='home'>Home</a></li>
+                    <li><a id='about'>About</a></li>
+                    <li><a id='works'>Works</a></li>
+                    <li><a id='contact'>Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+{%endblock%}
+{%block content%}
+  <div class="container offset-top-70">
+      <div class="row">
+          <div class="columns col12">
+              <div class="project-head bg_parallax" style="background-image: url({% static 'images/bg-index.jpg' %}); ">
+                <div class="block-head">
+                   <div class="avatar">
+                       <img src='{% static "images/ava.jpg"  %}' alt="">
+                   </div>
+                    <h1>My studio</h1>
+                    <p class="slogan">
+                        Develope
+                    </p>
+                </div><!--End block head-->
+            </div><!--End project head-->
+          </div><!--End columns col12-->
+      </div><!--End row-->
+  </div><!--End container-->
+  <div class="container triangle white">
+      <div class="row">
+          <div class="centered-col8">
+             <div class="block about">
+                  <h2>About</h2>
+                  <div class="container">
+                      <div class="row">
+                          <div class="columns col6 description">
+                              <h4>About me</h4>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium temporibus numquam deserunt itaque dolor hic aliquid ex, voluptatem atque, tenetur. Dolorum modi itaque reiciendis esse. Eius saepe, vitae id totam.Veritatis, iste ipsum pariatur cum quo? Perspiciatis aliquam sunt, mollitia iusto perferendis odit excepturi, voluptatem, facere expedita vero deleniti exercitationem porro quibusdam hic maxime provident ea, repudiandae at distinctio assumenda.</p>
+                          </div>
+                          <div class="columns col6 skills">
+                             <h4>My Skills</h4>
+                              <ul>
+                                  <li>
+                                         <div class="stat">
+                                              <p class="label">HTML&CSS</p>
+                                              <p class="skill">80%</p>
+                                         </div>
+                                         <div class="progress">
+                                            <div class="bg-progress-80"></div>
+                                         </div>
+                                  </li>
+                                  <li>
+                                      <div class="stat">
+                                              <p class="label">Bootstrap</p>
+                                              <p class="skill">60%</p>
+                                         </div>
+                                         <div class="progress">
+                                            <div class="bg-progress-60"></div>
+                                         </div>
+                                  </li>
+                                  <li>
+                                      <div class="stat">
+                                              <p class="label">Ajax</p>
+                                              <p class="skill">40%</p>
+                                         </div>
+                                         <div class="progress">
+                                            <div class="bg-progress-40"></div>
+                                         </div>
+                                  </li>
+                                  <li>
+                                      <div class="stat">
+                                              <p class="label">Django Framework</p>
+                                              <p class="skill">70%</p>
+                                         </div>
+                                         <div class="progress">
+                                            <div class="bg-progress-70"></div>
+                                         </div>
+                                  </li>
+                                  <li>
+                                      <div class="stat">
+                                              <p class="label">Python</p>
+                                              <p class="skill">60%</p>
+                                         </div>
+                                         <div class="progress">
+                                            <div class="bg-progress-60"></div>
+                                         </div>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+             </div>
+          </div><!--End columns col12-->
+      </div><!--End row-->
+  </div><!--End container triangle white-->
+  <div class="container gray">
+      <div class="row">
+          <div class="centered-col8">
+              <div class="block works">
+                  <h2>My Works</h2>
+                  <ul class="grid">
+                    {%for project in projects%}
+                      <a href="/folio/{{project.project_slug}}"><li class="grid-item item-width-{{project.project_type_block}}">
+                          <div class="overlay"></div>
+                          <h6>{{project.project_name}}</h6>
+
+                          <img src="{{project.get_image}}" alt="">
+                      </li></a>
+                    {%endfor%}
+                  </ul>
+              </div><!--End folio-->
+          </div><!--End columns col12-->
+      </div><!--End row-->
+  </div><!--End container-->
+  <div class="container footer">
+      <div class="row">
+          <div class="centered-col8">
+            <div class="block social">
+                 <h2>I'm on</h2>
+                 <ul>
+                     <li><a href="#"><img src='{% static "images/icons/upwork.png" %}' alt=""></a></li>
+                     <li><a href="#"><img src='{% static "images/icons/google-plus.png" %}' alt=""></a></li>
+                     <li><a href="#"><img src='{% static "images/icons/vk.png" %}' alt=""></a></li>
+                     <li><a href="#"><img src='{% static "images/icons/github.png" %}' alt=""></a></li>
+
+                 </ul>
+            </div>
+          </div><!--End columns col12-->
+      </div><!--End row-->
+  </div><!--End container footer-->
+  <div class="container subfooter">
+      <div class="row">
+          <div class="centered-col8">
+             <div class="block contact">
+                  <h2>Contact me</h2>
+                  <div class="contact-form">
+                      <div class="container">
+                          <div class="row">
+                              <div class="columns col4">
+                                  <form action="">
+                                      <p><input type="text" placeholder="Name *" required></p>
+                                      <p><input type="email" placeholder="Email *" required></p>
+                                      <p><input type="text" placeholder="Subject *" required></p>
+                                      <p>
+                                          <textarea name="" id="" placeholder="Message*" required></textarea>
+                                      </p>
+                                      <p><button type="submit">Send</button></p>
+                                  </form>
+                              </div>
+                              <div class="columns col4">
+                                  <div id="map"></div>
+                              </div>
+                              <div class="columns col4 ">
+                                 <div class="life-contact">
+                                  <p><img src='{% static "images/icons/address.png" %}' alt="">Russia,</p>
+                                  <p><img src='{% static "images/icons/phone.png" %}' alt=""><a href="">+7 (999) 111-11-11</a></p>
+                                  <p><img src='{% static "images/icons/mail.png" %}' alt=""><a href="">job@example.com</a></p>
+				                          <p><img src='{% static "images/icons/telegram-logo.png" %}' alt=""><a href="#">Telegram:@account</a></li>
+                                  <p><img src='{% static "images/icons/timework.png" %}' alt="">From 10:00 to 20:00</p>
+                                 </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+             </div>
+          </div>
+      </div>
+  </div>
+  {%endblock%}
+  {%block map%}
+    <!--Map Script-->
+    <script type="text/javascript">
+                var map = L.map('map',{scrollWheelZoom: true,}).setView([55.753981,37.620565], 11);
+                var icon_marker = L.icon({
+                                          iconUrl: 'images/icons/marker.png',
+                                          iconSize:[32,32],
+                                          iconAnchor: [11,25]
+                                        });
+                var marker = L.marker([55.753981,37.620565],{icon: icon_marker});
+                L.tileLayer('http://tiles.maps.sputnik.ru/{z}/{x}/{y}.png', {
+                              attribution: 'Map data &copy <a href="http://sputnik.ru">Спутник</a> | &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+                              maxZoom: 18,
+                          }).addTo(map);
+                marker.addTo(map);
+
+  </script>
+   <!--End script-->
+  {%endblock%}
+</body>
+</html>

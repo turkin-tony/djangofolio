@@ -1,0 +1,536 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,100,300);
+@import url(https://fonts.googleapis.com/css?family=Exo+2:400,100,200&subset=latin,cyrillic);
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.gray{
+    background-color: #ededed;
+}
+
+p{
+    color:#808080;
+}
+
+.offset-top-70{
+  margin-top: 70px;
+}
+
+.responsive{
+  width: 100%;
+  height: auto;
+}
+
+
+/*menu*/
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 5;
+    background-color: white;
+    opacity: 1;
+}
+
+.main-menu li{
+    margin: 25px 10px;
+}
+
+.main-menu li a{
+    text-decoration: none;
+    color:#808080;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.main-menu li a:hover{
+    color:#47a9ff;
+}
+/**/
+
+
+
+/*Top parallax*/
+
+.project-head{
+    background-attachment: fixed;
+    background-origin: initial;
+    background-clip: initial;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:100% 0;
+    position:relative;
+    height:1000px;
+
+}
+
+.block-head{
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 100px;
+
+}
+
+.logo-container{
+    margin: 0 auto;
+    position: relative;
+    margin: 2px;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.logo-container span{
+    position: relative;
+    top: -1px;
+    margin: 5px;
+}
+
+.avatar{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 5% auto 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid white;
+
+}
+
+.avatar img{
+    width: 100%;
+    height: auto;
+}
+
+.block-head h1{
+    #margin-top: 15%;
+    font-size: 7em;
+    color: white;
+    font-family: 'Exo 2', sans-serif;
+
+}
+
+
+
+.slogan{
+    color: white;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 2em;
+    font-weight: 300;
+
+}
+
+.main-menu{
+    list-style: none;
+}
+
+.main-menu li{
+    display: inline-block;
+}
+
+
+/*Block with triangel*/
+
+.white{
+    background-color: white;
+}
+
+.triangle::before{
+    position: absolute;
+    z-index: 1;
+    top: 800px;;
+    right: 0px;
+    border: 200px solid transparent;
+    border-right: 1950px solid white;
+    border-bottom: 1px solid white;
+}
+
+
+/*Blocks*/
+
+.block{
+    font-family: 'Exo 2', sans-serif;
+}
+
+.block h2{
+    font-weight: 200;
+    text-align: center;
+    font-size: 34px;
+    padding: 10px 0;
+}
+
+/*About block*/
+.about{
+    margin: 25px;
+}
+
+.skills h4,
+.description h4{
+    text-align: left;
+    margin: 20px 0 10px 20px;
+    font-weight: 300;
+    font-size: 22px
+}
+
+.description p{
+    text-align: justify;
+    margin: 0 40px 0 20px;
+    line-height: 24px;
+}
+
+.skills ul{
+    margin: 10px 10px 0px 20px;
+    list-style: none;
+}
+
+.skills ul li{
+
+}
+
+.skills ul li .stat{
+    position: relative;
+    display: block;
+    height: 20px;
+}
+
+.progress{
+    margin: 5px 0;
+    height: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+p.label{
+    text-align: left;
+    position: absolute;
+    left: 0;
+}
+
+p.skill{
+    position: absolute;
+    right: 0;
+}
+
+.bg-progress-40{
+    width: 40%;
+    height: 100%;
+    background-color: #47a9ff;
+}
+
+.bg-progress-60{
+    width: 60%;
+    height: 100%;
+    background-color: #47a9ff;
+}
+.bg-progress-70{
+    width: 70%;
+    height: 100%;
+    background-color: #47a9ff;
+}
+.bg-progress-80{
+    width: 80%;
+    height: 100%;
+    background-color: #47a9ff;
+}
+.bg-progress-90{
+    width: 90%;
+    height: 100%;
+    background-color: #47a9ff;
+}
+/*Folio*/
+
+
+.grid{
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    list-style: none;
+    padding-bottom: 40px;
+}
+
+.grid a{
+  text-decoration: none;
+  color: white;
+}
+
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+}
+
+
+.grid-item{
+  display: inline-block;
+  height: 400px;
+  background: white;
+  margin: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.grid-item .overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    transition: .9s;
+}
+
+.grid-item h6{
+    position: absolute;
+    z-index: 2;
+    margin: 10px;
+    color:white;
+    font-size: 20px;
+    font-weight: lighter;
+    transition: 1s;
+    left:-150px;
+}
+
+.item-width-400{
+    width: 400px;
+}
+
+.item-width-600{
+    width: 600px;
+}
+
+.item-width-400 img{
+    width: 100%;
+    height: auto;
+    transition: 3s;
+}
+
+.item-width-400 img{
+    position: absolute;
+    left: -50%;
+    width: 200%;
+    height: auto;
+    transition: 3s;
+}
+
+.grid-item:hover h6{
+    left:0;
+}
+
+.grid-item:hover .overlay{
+    opacity: 1;
+}
+
+.grid-item:hover img{
+    transform: scale(1.5);
+}
+
+/*Project Page*/
+
+.project-name{
+  padding: 60px 0;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 2.2em;
+}
+
+.text,
+.tags{
+  text-align: left;
+  padding: 40px 0;
+}
+
+.tags li{
+  color: #808080;
+  display: inline-block;
+}
+
+
+.tags li:not(:last-child):after{
+  content: ',';
+}
+
+
+
+.prev-next-post,
+.image-holder{
+  padding: 40px 0;
+}
+
+
+
+.prev,
+.next{
+  display: block;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: lighter;
+  color:black;
+  text-transform: uppercase;
+}
+
+.prev{
+  float: left;
+}
+
+.next{
+  float: right;
+}
+/*Social icons*/
+
+.footer{
+    font-weight: 200;
+    font-family: 'Exo 2', sans-serif;
+    background-color: #172528;
+}
+
+.social h2{
+    color: white;
+}
+
+.social ul {
+    list-style: none;
+    display: block;
+    text-align: center;
+}
+
+.social ul li{
+    display: inline-block !important;
+    width: 64px;
+    height: 64px;
+    margin:60px 40px;
+}
+
+.social ul li a{
+    text-decoration: none;
+
+}
+
+.social ul li a img{
+    width: 100%;
+    height: auto;
+}
+/**/
+
+
+
+
+.subfooter{
+    background-color: #0b1214;
+    padding-bottom: 40px;
+
+}
+
+.contact{
+    margin-bottom: 20px;
+}
+
+.contact h2{
+    color:white;
+}
+
+.contact-form{
+    margin-top: 20px;
+    background-color: white;
+    width: 100%;
+    height: auto;
+}
+
+
+.life-contact{
+    margin: 25% auto;
+    width: 300px;
+}
+
+.life-contact p{
+    text-align: left;
+    line-height: 24px;
+    margin: 20px;
+}
+
+.life-contact p a{
+    color: #808080;
+    text-decoration: none;
+    padding: 4px;
+}
+
+.life-contact p img{
+    width: 32px;
+    height: 32px;
+    margin: -10px 25px;
+}
+
+/*Form*/
+form{
+    display: block;
+    margin: 40px 40px;
+}
+
+form input[type=text],
+form input[type=email]{
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px dotted #aaa;
+    outline: none;
+    background-color: transparent;
+}
+
+form textarea{
+    width: 100%;
+    height: 200px;
+    padding: 4px;
+    resize: none;
+    border: none;
+    border-bottom: 1px dotted #aaa;
+    outline: none;
+    background-color: transparent;
+}
+
+form button{
+    background-color: #47a9ff;
+    color:white;
+    border: none;
+    margin-top: 10px;
+    padding: 10px 40px;
+    float: right;
+}
+
+form input[type=text]:focus,
+form input[type=email]:focus,
+form textarea:focus{
+    border-bottom: 1px dotted #47a9ff;
+}
+
+.bottom-footer *{
+    color:#808080;
+    font-size: 12px;
+}
+
+.bottom-toolbar-l p{
+    text-align: left;
+}
+
+.bottom-toolbar-r div,
+.bottom-toolbar-r p{
+    text-align: right;
+}
+/*Map*/
+#map{
+    width: 100%;
+    height: 420px;
+}

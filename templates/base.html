@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="">
+<head>
+  {%load staticfiles%}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href='{% static "css/style.css" %}'>
+  <link rel="stylesheet" href='{% static "css/grid.css" %}'>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+  <script src='{% static "js/jquery-2.1.1.js" %}'></script>
+  <script src='{% static "js/jquery-ui.min.js" %}'></script>
+  <script src='{% static "js/leaflet.js" %}'></script>
+  <script src='{% static "js/masonry.min.js" %}'></script>
+  <script src='{% static "js/plugins.js" %}'></script>
+  <script src='{% static "js/head_parallax.js" %}'></script>
+  <title></title>
+</head>
+
+<body>
+{%block nav%}
+{%endblock%}
+{%block content%}{%endblock%}
+<div class="container subfooter">
+  <div class="row">
+      <div class="centered-col8 bottom-footer">
+          <div class="container">
+              <div class="row">
+                  <div class="columns col5 bottom-toolbar-l">
+                      <p>Design and Coding by turkin-tony</p>
+                      <p>Turkin Tony &copy; 2016</p>
+                  </div>
+                  <div class="columns col2">
+                      <div class="logo-container">
+                    <img class="main-logo" src='{% static "images/icons/rabbit-head-w.png" %}' alt="">
+               </div>
+                  </div>
+                  <div class="columns col5 bottom-toolbar-r">
+                      <div>Icons made by <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> & <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+{%block map%}{%endblock%}
+</body>
+</html>

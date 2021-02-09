@@ -1,0 +1,76 @@
+{%extends 'base.html'%}
+{%load staticfiles%}
+{%block nav%}
+<nav>
+    <div class="container">
+        <div class="row">
+            <div class="columns col2 not-break-col2">
+
+                    <div class="logo-container">
+                        <img class="main-logo" src='{% static "images/icons/rabbit-head.png" %}' alt="">
+                   </div>
+
+            </div>
+            <div class="columns col10 not-break-col10">
+                <ul class="main-menu">
+                    <li><a href="/">Главная</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+{%endblock%}
+{%block content%}
+<div class="container ">
+  <div class="row">
+    <div class="centered-col9 offset-top-70">
+      <h1 class="project-name">{{project.project_name}}</h1>
+      <div class="container">
+        <div class="row">
+          <div class="columns col6">
+            <ul class="tags">
+              {%for tag in project.projecttags_set.all%}
+
+                  <li>{{tag}}</li>
+
+              {%endfor%}
+            </ul>
+          </div>
+          <div class="columns col6">
+            <p class="text">{{project.project_text| safe}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="centered-col9">
+      {%for img in project.projectgallery_set.all%}
+      <div class="image-holder">
+        <img src="{{img.get_image}}" alt="" class="responsive">
+      </div>
+      {%endfor%}
+    </div>
+  </div>
+  <div class="row">
+    <div class="centered-col9">
+      <div class="prev-next-post">
+            {% if project.get_previous_by_project_pub %}
+                <div class="prev-post">
+        	    <a href="{{ project.get_previous_by_project_pub.project_slug }}" class="prev">
+        	        << Пред.
+        	    </a>
+        	</div>
+            {% endif %}
+            {% if project.get_next_by_project_pub %}
+                <div class="next-post">
+        	    <a href="{{ project.get_next_by_project_pub.project_slug }}" class="next">
+        		 След.>>
+        	    </a>
+        	</div>
+            {% endif %}
+        </div>
+    </div>
+  </div>
+</div>
+{%endblock%}
